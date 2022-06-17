@@ -89,8 +89,8 @@ if(isset($_POST["getproduct"])) {
             <div class='col-md-4'>
                     <div class='panel panel-info'>
                         <div class='panel-heading'>$pro_title</div>
-                        <div class='panel-body'> <img src='product_images/$pro_image' style='width:160px; height:250px;/></div>
-                        <div class='panel-heading'>$.$pro_price.00
+                        <div class='panel-body'> <img src='product_images/$pro_image' style='width:200px; height:250px;/></div>
+                        <div class='panel-heading'>RM $pro_price.00
                         <button pid='$pro_id' id='product' style='float:right;' class='btn btn-danger btn-xs'>AddToCart</button>
                     </div>
                     </div>
@@ -132,8 +132,8 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectbrand"])  || iss
             <div class='col-md-4'>
                     <div class='panel panel-info'>
                         <div class='panel-heading'>$pro_title</div>
-                        <div class='panel-body'> <img src='product_images/$pro_image' style='width:160px; height:250px;/></div>
-                        <div class='panel-heading'>$.$pro_price.00
+                        <div class='panel-body'> <img src='product_images/$pro_image' style='width:200px; height:250px;/></div>
+                        <div class='panel-heading'>RM $pro_price.00
                         <button pid='$pro_id' id='product' style='float:right;' class='btn btn-danger btn-xs'>AddToCart</button>
                     </div>
                     </div>
