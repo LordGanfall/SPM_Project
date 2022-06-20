@@ -1,30 +1,19 @@
 
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Online Store</title>
-		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<script src="js/jquery2.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="main.js"></script>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-<body>
+<?php include "header.php" ?>
 <div class="wait overlay">
 	<div class="loader"></div>
 </div>
-	<div class="navbar navbar-inverse navbar-fixed-top">
+	<!-- <div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">	
 			<div class="navbar-header">
-				<a href="index.php" class="navbar-brand">Online Store</a>
+			<a href="index.php" style="font-family: 'Lobster', cursive; font-size:xx-large;" class="navbar-brand"><img style="display: inline-block;" src="https://www.pngrepo.com/png/36280/180/shopping-bag.png" width="50px" height="50px" alt=""> BagUs Store</a>
 			</div>
 			<ul class="nav navbar-nav">
 				<li><a href="index.php"><span class="glyphicon glyphicon-home"></span>Home</a></li>
 				<li><a href="index.php"><span class="glyphicon glyphicon-modal-window"></span>Product</a></li>
 			</ul>
 		</div>
-	</div>
+	</div> -->
 	<p><br/></p>
 	<p><br/></p>
 	<p><br/></p>

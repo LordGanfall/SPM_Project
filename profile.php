@@ -8,32 +8,32 @@ session_start();
 if (!isset($_SESSION["uid"])) {
 header("location:index.php");
 }
+// include "header.php";
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BagUs Store</title>
+    <title>BAG-US ONLINE STORE</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-   
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<script src="js/jquery2.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="main.js"></script>
-		<link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
-     crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/jquery2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://www.pngrepo.com/png/36280/180/shopping-bag.png" type="image/x-icon">
+    <link rel="icon" href="https://www.pngrepo.com/png/36280/180/shopping-bag.png" type="image/x-icon">
 <body>
 
 <div class="navbar navbar-inverse navbar-fixed-top"> 
     <div class="container-fluid"> 
         <div class="navbar navbar-header"> 
-            <a href="index.php" class="navbar-brand">BagUs Store</a>
+        <a href="index.php?page=index" style="font-family: 'Lobster', cursive; font-size:xx-large;" class="navbar-brand"><img style="display: inline-block;" src="https://www.pngrepo.com/png/36280/180/shopping-bag.png" width="50px" height="50px" alt=""> BagUs Store</a>
         </div>
         <ul class="nav navbar-nav">
             <li> <a href="#"><i class="fas fa-home"></i>Home</a></li>
@@ -43,8 +43,9 @@ header("location:index.php");
         </ul>
 <!-- cert -->
         <ul class="nav navbar-nav navbar-right">
-            <li> <a href="c#" id ="cart_container" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-cart-plus"></i>Cart <span class="badge">0</span></a>
-            <div class="dropdown-menu" style="width:400px;">
+            
+            <li> <a href="cart.php" id ="cart_container" class="dropdown-toggle" ><i class="fas fa-cart-plus"></i>Cart <!-- <span class="badge">0</span>  --> </a>
+            <!-- <div class="dropdown-menu" style="width:400px;">
                 <div class="panel panel-success">
                     <div class="panel-heading">
                         <div class="row">
@@ -56,17 +57,17 @@ header("location:index.php");
                     </div>
                     <div class="panel-body">
                     <div id="cart_product"> 
-                    <!--<div class="row">
+                    <div class="row">
                             <div class="col-md-3">SL.NO</div>
                             <div class="col-md-3">product image</div>
                             <div class="col-md-3">produc name</div>
                             <div class="col-md-3"> prices in $</div>
-                        </div> -->
+                        </div>
                         </div>
                     </div>
                     <div class="panel-footer"></div>
                 </div>
-            </div>
+            </div> -->
             </li>
 
             <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-sign-in-alt"></i><?php echo $_SESSION["name"]; ?></a>
