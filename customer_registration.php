@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Online Store</title>
+		<title>BagUs Store</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<script src="js/jquery2.js"></script>
 		<script src="js/bootstrap.min.js"></script>
@@ -17,7 +17,7 @@
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">	
 			<div class="navbar-header">
-				<a href="index.php" class="navbar-brand">Online Store</a>
+				<a href="index.php" class="navbar-brand">BagUs Store</a>
 			</div>
 			<ul class="nav navbar-nav">
 				<li><a href="index.php"><span class="glyphicon glyphicon-home"></span>Home</a></li>
@@ -62,7 +62,7 @@
 						</div>
 						<div class="row">
 							<div class="col-md-12">
-								<label for="password">password</label>
+								<label for="password">Password</label>
 								<input type="password" id="password" name="password"class="form-control">
 							</div>
 						</div>
