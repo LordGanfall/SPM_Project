@@ -28,8 +28,8 @@
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
-				<div class="panel panel-primary">
-					<div class="panel-heading">Customer SignUp Form</div>
+				<div class="panel panel-warning">
+					<div class="panel-heading" style="color: black;">Customer SignUp Form</div>
 					<div class="panel-body">
 					
 					<form id="signup_form" onsubmit="return false">

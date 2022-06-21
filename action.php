@@ -8,15 +8,15 @@ if (isset($_POST["category"])) {
     $category_query = "SELECT * FROM categories";
     $run_query = mysqli_query($con, $category_query) or die(mysqli_error($con));
     echo "
-		<div class='nav nav-pills nav-stacked'>
-			<li class='active'><a href='#'><h4>Categories</h4></a></li>
+		<div class='nav nav-pills nav-stacked' >
+			<li class='active'><a style='background-color: #333;border:5px solid wheat;' href='#'><h4 style='font-family: Lobster; font-size:x-large; color: wheat;'>Categories</h4></a></li>
 	";
     if (mysqli_num_rows($run_query) > 0) {
         while ($row = mysqli_fetch_array($run_query)) {
             $cid = $row["cat_id"];
             $cat_name = $row["cat_title"];
             echo "
-					<li><a href='#' class='category' cid='$cid'>$cat_name</a></li>
+					<li><a style='color:#232B2B;' href='#' class='category' cid='$cid'>$cat_name</a></li>
 			";
         }
         echo "</div>";
@@ -30,14 +30,14 @@ if (isset($_POST["brand"])) {
     $run_query = mysqli_query($con, $brand_query) or die(mysqli_error($con));
     echo "
 		<div class='nav nav-pills nav-stacked'>
-			<li class='active'><a href='#'><h4>Brands</h4></a></li>
+			<li class='active'><a style='background-color: #333;border:5px solid wheat;'  href='#'><h4 style='font-family: Lobster; font-size:x-large; color: wheat;'>Brands</h4></a></li>
 	";
     if (mysqli_num_rows($run_query) > 0) {
         while ($row = mysqli_fetch_array($run_query)) {
             $bid = $row["brand_id"];
             $brand_name = $row["brand_title"];
             echo "
-					<li><a href='#' class='selectbrand' bid='$bid'>$brand_name</a></li>
+					<li><a style='color:#232B2B;' href='#' class='selectbrand' bid='$bid'>$brand_name</a></li>
 			";
         }
         echo "</div>";
@@ -89,11 +89,11 @@ if (isset($_POST["getproduct"])) {
             $pro_image = $row['product_image'];
             echo "
             <div class='col-md-4'>
-                    <div class='panel panel-info'>
-                        <div class='panel-heading'>$pro_title</div>
-                        <div class='panel-body'> <img src='product_images/$pro_image' style='width:200px; height:250px;/></div>
-                        <div class='panel-heading'>RM $pro_price.00
-                        <button pid='$pro_id' id='product' style='float:right;' class='btn btn-danger btn-xs'>AddToCart</button>
+                    <div class='panel panel-warning'>
+                        <div class='panel-heading' style='color:black;'>$pro_title</div>
+                        <div class='panel-body'> <img src='product_images/$pro_image' style='width:100%; height:70%; margin-bottom:10px;/></div>
+                        <div class='panel-heading> <span> RM $pro_price.00 </span>
+                        <button pid='$pro_id' id='product' style='float:right; padding:5px;' class='btn btn-success btn-xs'>Add To Cart</button>
                     </div>
                     </div>
                     </div>
@@ -131,11 +131,11 @@ if (isset($_POST["get_seleted_Category"]) || isset($_POST["selectbrand"])  || is
         $pro_image = $row['product_image'];
         echo "
             <div class='col-md-4'>
-                    <div class='panel panel-info'>
-                        <div class='panel-heading'>$pro_title</div>
-                        <div class='panel-body'> <img src='product_images/$pro_image' style='width:200px; height:250px;/></div>
+                    <div class='panel panel-warning'>
+                        <div class='panel-heading' style='color:black;'>$pro_title</div>
+                        <div class='panel-body'> <img src='product_images/$pro_image' style='width:100%; height:70%; margin-bottom:10px;/></div>
                         <div class='panel-heading'>RM $pro_price.00
-                        <button pid='$pro_id' id='product' style='float:right;' class='btn btn-danger btn-xs'>AddToCart</button>
+                        <button pid='$pro_id' id='product' style='float:right; padding:5px;' class='btn btn-success btn-xs'>Add To Cart</button>
                     </div>
                     </div>
                     </div>
@@ -152,7 +152,10 @@ if (isset($_POST["addProduct"])) {
         $run_query = mysqli_query($con, $sql);
         $count = mysqli_num_rows($run_query);
         if ($count   > 0) {
-            echo "product is a;ready added";
+            echo "   <div class='alert alert-danger'>
+            <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+            <b>Product already in cart</b>
+            </div>";
         } else {
             $sql = "SELECT * FROM products WHERE product_id='$p_id'";
             $run_query = mysqli_query($con, $sql);
@@ -170,7 +173,7 @@ if (isset($_POST["addProduct"])) {
                 echo "
             <div class='alert alert-success'>
             <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-            <b>Product added to cert :)</b>
+            <b>Product added to cart</b>
             </div>
             ";
             }
@@ -179,7 +182,7 @@ if (isset($_POST["addProduct"])) {
         echo "
        <div class='alert alert-danger'>
        <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-       <b>please SIGN in or register to add to cart</b>
+       <b>Please Sign in first !!!</b>
        </div>   
        ";
     }
@@ -211,7 +214,7 @@ if (isset($_POST["get_cart_product"]) || isset($_POST["car_checkout"])) {
                 echo "
                 <div class='row'>
                     <div class='col-md-3'>$no</div>
-                    <div class='col-md-3'><img src='product_images/$pro_image' width='60px' height='50px'></div>
+                    <div class='col-md-3'><img src='product_images/$pro_image' width='100%' height='50px'></div>
                     <div class='col-md-3'>$pro_name</div>
                     <div class='col-md-3'>$$pro_price.00</div>
                 </div>
@@ -227,7 +230,7 @@ if (isset($_POST["get_cart_product"]) || isset($_POST["car_checkout"])) {
                        <a href='#' update_id='$pro_id' class='btn btn-primary update'><i class='far fa-edit'></i></i></a> 
                     </div>
                     </div>
-                    <div class='col-md-2'><img src='product_images/$pro_image' width='60px' height='50px'></div>
+                    <div class='col-md-2' ><img style='margin-left:27px;' src='product_images/$pro_image' width='50px' height='50px'></div>
                     <div class='col-md-2'>$pro_name</div>
                     <div class='col-md-2'><input type='text' class='form-control price' pid='$pro_id' id='price-$pro_id' value='$pro_price' disabled ></div>
                     <div class='col-md-2'><input type='text' class='form-control qty' pid='$pro_id' id='qty-$pro_id' value='$qty'  ></div>
@@ -261,7 +264,7 @@ if (isset($_POST["get_cart_product"]) || isset($_POST["car_checkout"])) {
         while ($row = mysqli_fetch_array($run_query)) {
             $x++;
             echo '
-            
+            <input hidden name="total" type="text" value='.$total_amt.'>
             <input type="hidden" name="item_name_' . $x . '" value="' . $row["product_title"] . '">
             <input type="hidden" name="item_number_' . $x . '" value="' . $x . '">
             <input type="hidden" name="amount_' . $x . '" value="' . $row["price"] . '">
@@ -273,11 +276,11 @@ if (isset($_POST["get_cart_product"]) || isset($_POST["car_checkout"])) {
         echo '    
             <input type="hidden" name="return" value="http://127.0.0.1/onlinestore/payment_success.php">
             <input type="hidden" name="cancel_return" value="http://127.0.0.1/onlinestore/cancel.php">
-            <input type="hidden" name="currency_code" value="USD"/>
+            <input type="hidden" name="currency_code" value="RM"/>
             <input type="hidden" name="x" value="'.$x.'"/>
             <input type="hidden" name="custom" value="' . $uid . '"/>           
             <div style="text-align:right;">
-            <button class="btn btn-success" style="margin-top:10px; width:100px;" type="submit">Pay</button>       
+            <button class="btn btn-success" style="margin-top:10px;margin-bottom:10px; width:100px;" type="submit">Pay</button>       
             </div>
           </form>
         ';
@@ -301,9 +304,10 @@ if (isset($_POST["removefromcart"])) {
     $run_quey = mysqli_query($con, $sql);
     if ($run_quey) {
         echo "
-    <div class='alert alert-primary'>
-    <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>iteam remove from cart</b>
-    </div>
+        <div class='alert alert-danger'>
+        <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+        <b>Item removed from cart</b>
+        </div>
     ";
     }
 }
@@ -324,7 +328,7 @@ if (isset($_POST["updatproduct"])) {
     if ($run_query) {
         echo "
         <div class='alert alert-success'>
-        <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>iteam update success</b>
+        <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Cart updated successfully</b>
         </div>  
         ";
     }

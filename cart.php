@@ -17,15 +17,16 @@ if (!isset($_SESSION["uid"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ONLINE STORE</title>
+    <title>BAG-US ONLINE STORE</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="js/jquery2.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="main.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://www.pngrepo.com/png/36280/180/shopping-bag.png" type="image/x-icon">
+    <link rel="icon" href="https://www.pngrepo.com/png/36280/180/shopping-bag.png" type="image/x-icon">
 </head>
 
 <body>
@@ -33,12 +34,9 @@ if (!isset($_SESSION["uid"])) {
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar navbar-header">
-                <a href="index.php" class="navbar-brand"> ONLINE STORE</a>
+            <a href="index.php?page=index" style="font-family: 'Lobster', cursive; font-size:xx-large; color: wheat;" class="navbar-brand"><img style="display: inline-block;" src="https://www.pngrepo.com/png/36280/180/shopping-bag.png" width="50px" height="50px" alt=""> BagUs Store</a>
             </div>
-            <ul class="nav navbar-nav">
-                <li> <a href="#"><i class="fas fa-home"></i>Home</a></li>
-                <li> <a href="#"><i class="fas fa-store"></i>Product</a></li>
-            </ul>
+         
         </div>
     </div>
     <p><br /></p>
@@ -58,8 +56,8 @@ if (!isset($_SESSION["uid"])) {
         <div class="row">
             <div class="col-md-2"> </div>
             <div class="col-md-8">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Cart Checkout</div>
+                <div class="panel panel-warning">
+                    <div class="panel-heading"><span style="color:black;"><b>Cart Checkout</b></span> </div>
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-2"><b>Action</b></div>
@@ -72,32 +70,13 @@ if (!isset($_SESSION["uid"])) {
 
                         <div id="cart_checkout">
                         </div>
-                        <!--    <div class="row"> 
-                    <div class="col-md-2">
-                    <div class="btn-group">
-                       <a href="#" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a> 
-                       <a href="#" class="btn btn-primary"><i class="far fa-edit"></i></i></a> 
+
+                        <div class="panel-footer"></div>
                     </div>
-                    </div>
-                    <div class="col-md-2"><img src="product_images/imges.jpg"></div>
-                    <div class="col-md-2">Product Name</div>
-                    <div class="col-md-2"><input type="text" class="form-control" value="500" disabled ></div>
-                    <div class="col-md-2"><input type="text" class="form-control" value="1"  ></div>
-                    <div class="col-md-2"><input type="text" class="form-control" value="500" disabled ></div>
-                    </div> -->
-                    </div>
-                    <!-- <div class="row">
-                    <div class="col-md-8"></div>
-                    <div class="col-md-4">
-                    <b>Total:4000</b>
-                    </div>
-                </div> -->
-                    <div class="panel-footer"></div>
                 </div>
+                <div class="col-md-2"> </div>
             </div>
-            <div class="col-md-2"> </div>
         </div>
-    </div>
 
 </body>
 
