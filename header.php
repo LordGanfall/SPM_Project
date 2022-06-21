@@ -18,9 +18,9 @@ if (isset($_SESSION["uid"])) {
     <title>BAG-US ONLINE STORE</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <script src="js/jquery2.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="main.js"></script>
+    <script src="./js/jquery2.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="main.js"></script> 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="shortcut icon" href="https://www.pngrepo.com/png/36280/180/shopping-bag.png" type="image/x-icon">
@@ -30,7 +30,7 @@ if (isset($_SESSION["uid"])) {
 <body>
 
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">    
         <div class="container-fluid">
             <div class="navbar navbar-header">
                 <a href="index.php?page=index" style="font-family: 'Lobster', cursive; font-size:xx-large; color: wheat;" class="navbar-brand"><img style="display: inline-block;" src="https://www.pngrepo.com/png/36280/180/shopping-bag.png" width="50px" height="50px" alt=""> BagUs Store</a>
