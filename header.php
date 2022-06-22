@@ -20,24 +20,45 @@ if (isset($_SESSION["uid"])) {
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="./js/jquery2.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="main.js"></script> 
+    <script src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="shortcut icon" href="https://www.pngrepo.com/png/36280/180/shopping-bag.png" type="image/x-icon">
     <link rel="icon" href="https://www.pngrepo.com/png/36280/180/shopping-bag.png" type="image/x-icon">
+
+    <style>
+        @media only screen and (max-width: 1500px) {
+            .navdisplay {
+                display: none;
+
+            }
+
+            .navicon {
+                display: flex;
+                justify-content: space-around;
+            }
+
+           
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            .cart {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 
-    <div class="navbar navbar-inverse navbar-fixed-top">    
+    <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar navbar-header">
                 <a href="index.php?page=index" style="font-family: 'Lobster', cursive; font-size:xx-large; color: wheat;" class="navbar-brand"><img style="display: inline-block;" src="https://www.pngrepo.com/png/36280/180/shopping-bag.png" width="50px" height="50px" alt=""> BagUs Store</a>
             </div>
-            <ul class="nav navbar-nav" style="margin-left:500px">
-                <!-- <li> <a href="index.php?page=index "><i class="fas fa-home"></i>Home</a></li> -->
-                <!-- <li> <a href="#"><i class="fas fa-store"></i>Product</a></li> -->
+            <ul class="nav navbar-nav navdisplay" style="margin-left:500px">
                 <?php if (isset($_GET['page'])) {
                     if ($_GET['page'] == 'index') { ?>
                         <li style="width:400px;padding-top: 20px;"><input type="text" class="form-control" id="search"></li>
@@ -46,10 +67,10 @@ if (isset($_SESSION["uid"])) {
                 } ?>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right" style="margin-top:8px;">
+            <ul class="nav navbar-nav navbar-right navicon" style="margin-top:8px;">
                 <?php if (isset($_GET['page'])) {
                     if ($_GET['page'] == 'index') { ?>
-                 
+
                         <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-cart-plus"></i>Cart</a>
                             <div class="dropdown-menu" style="width:400px;">
                                 <div class="panel panel-success">
@@ -80,7 +101,7 @@ if (isset($_SESSION["uid"])) {
                                                 <label for="email">Password</label>
                                                 <input type="password" class="form-control" name="password" id="password" required />
                                                 <p><br /></p>
-                                                <input type="submit" class="btn btn-success btn-block" id="Login" value="Login" style="float:right"> 
+                                                <input type="submit" class="btn btn-success btn-block" id="Login" value="Login" style="float:right">
                                             </form>
                                         </div>
                                         <br><br>
@@ -90,6 +111,8 @@ if (isset($_SESSION["uid"])) {
                             </ul>
                         </li>
                         <li> <a href="customer_registration.php?page=signup"><i class="fas fa-user-plus"></i>SignUp</a></li>
+
+
                 <?php   }
                 } ?>
             </ul>
