@@ -1,12 +1,13 @@
-Software Project Management Group Project (E-commerce)
+# Software Project Management Group Project (E-commerce)
 
-Login
+## Login
+<br>
 email: kasim@gmail.com
 <br>
 password: abc123456789
 
 
-******************** User Interface ********************************
+# Interface
 ![image](https://user-images.githubusercontent.com/74654331/178042819-1dc34dff-0dfc-4d93-a6b4-56f7f1f2dac7.png)
 
 ![image](https://user-images.githubusercontent.com/74654331/178043197-f3436a54-f890-499f-80a0-607b03503248.png)
