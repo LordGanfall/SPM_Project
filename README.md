@@ -1,7 +1,6 @@
 # Software Project Management Group Project (E-commerce)
 
 ## Login
-<br>
 email: kasim@gmail.com
 <br>
 password: abc123456789
